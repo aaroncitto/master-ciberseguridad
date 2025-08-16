@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* RESET BÁSICO */
 * {
   margin: 0;
   padding: 0;
@@ -6,62 +6,124 @@
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  min-height: 100vh;
-  background-color: #000000;
-  color: #9ad79b;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-/* HEADER fijo arriba */
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1f3c2d;
-  padding: 15px;
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #333;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-list a:hover {
+  text-decoration: underline;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #ff6600;
+  color: white;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* SERVICIOS */
+.services {
+  padding: 2rem;
+  background: #f4f4f4;
   text-align: center;
-  z-index: 10;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* SIDEBAR a la derecha */
-.sidebar {
-  position: absolute;
-  top: 100px; /* debajo del header */
-  right: 0;
-  width: 200px;
-  background-color: #2d4d3a;
-  padding: 15px;
-  height: calc(100% - 150px);
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
-/* CONTENIDO PRINCIPAL */
-main {
-  position: relative;
-  top: 100px; /* margen bajo el header */
-  left: 0;
-  padding: 20px;
-  width: calc(100% - 220px); /* deja espacio para la sidebar */
-}
-
-main section {
-  margin-bottom: 50px;
-  padding: 20px;
-  background-color: #163021;
+.service-card {
+  background: white;
+  padding: 1rem;
   border-radius: 8px;
+  flex: 1 1 250px;
+  max-width: 300px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* FOOTER pegado al fondo */
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #1f3c2d;
+/* FOOTER */
+.footer {
+  background: #333;
+  color: white;
   text-align: center;
-  padding: 10px;
-  font-size: 14px;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }

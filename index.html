@@ -3,42 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page con position</title>
+    <title>Landing Flexbox</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Bienvenido a la Landing Page de Aaron</h1>
-      <p>Explora y diviértete</p>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">Aarón</div>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <aside class="sidebar">
-      <h2>Menú</h2>
-      <ul>
-        <li>Inicio</li>
-        <li>Servicios</li>
-        <li>Proyectos</li>
-        <li>Contacto</li>
-      </ul>
-    </aside>
+    <!-- MAIN -->
+    <main class="main">
+      <!-- Sección Hero -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1>Diseños modernos y efectivos</h1>
+          <p>
+            Somos expertos en diseño web y marketing digital para hacer crecer
+            tu negocio.
+          </p>
+          <a href="#" class="btn">Saber más</a>
+        </div>
+        <div class="hero-image"></div>
+      </section>
 
-    <main>
-      <section>
-        <h2>Sección 1</h2>
-        <p>Este es el contenido principal.</p>
-      </section>
-      <section>
-        <h2>Sección 2</h2>
-        <p></p>
-      </section>
-      <section>
-        <h2>Sección 3</h2>
-        <p></p>
+      <!-- Sección Servicios -->
+      <section class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-container">
+          <div class="service-card">
+            <h3>Diseño Web</h3>
+            <p>
+              Creación de páginas modernas, rápidas y adaptadas a todos los
+              dispositivos.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Marketing Digital</h3>
+            <p>
+              Campañas efectivas para llegar a más clientes y aumentar tus
+              ventas.
+            </p>
+          </div>
+          <div class="service-card">
+            <h3>Branding</h3>
+            <p>
+              Construimos una identidad de marca única y atractiva para tu
+              negocio.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <p>© 2025 Aaron - Todos los derechos reservados</p>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>&copy; 2025 Aarón. Todos los derechos reservados.</p>
     </footer>
   </body>
 </html>
